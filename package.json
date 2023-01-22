@@ -1,0 +1,29 @@
+{
+	"name": "custom-easing-mixer",
+	"version": "0.0.1",
+	"description": "create custom ease functions",
+	"repository": "git@github.com:kpotschi/CustomEaseMixer.git",
+	"author": "Kevin Potschien <kpotschien@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"phaser": "^3.60.0-beta.18",
+		"phaser3-rex-plugins": "^1.1.74"
+	},
+	"devDependencies": {
+		"@parcel/transformer-pug": "^2.8.0",
+		"@parcel/transformer-yaml": "^2.8.0",
+		"@types/node": "^18.7.18",
+		"parcel": "^2.8.0",
+		"parcel-reporter-static-files-copy": "^1.4.0",
+		"phaser3-rex-plugins-types": "^0.2.0"
+	},
+	"scripts": {
+		"start": "VERSION=$npm_package_version parcel src/index.pug --open",
+		"build": "yarn clean && VERSION=$npm_package_version parcel build src/index.pug --public-url ./ --no-source-maps",
+		"clean": "rm -rf ./dist ./.parcel-cache"
+	},
+	"staticFiles": {
+		"staticPath": "./src/assets",
+		"staticOutPath": "./assets"
+	}
+}

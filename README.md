@@ -1,1 +1,1 @@
-# CustomEaseMixer
+Custom Easing Mixer for Phaser
